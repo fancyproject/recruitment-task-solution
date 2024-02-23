@@ -11,7 +11,7 @@ use PragmaGoTech\Interview\ValueObject\FeeRange;
 use PragmaGoTech\Interview\Model\LoanProposal;
 use PragmaGoTech\Interview\Service\FeeRangeRuleset;
 
-readonly class FeeRangeCalculator implements FeeCalculator
+readonly class FeeCalculatorByRange implements FeeCalculator
 {
     public function __construct(private FeeRangeRuleset $ruleset)
     {

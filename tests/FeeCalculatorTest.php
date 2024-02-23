@@ -10,7 +10,7 @@ use PragmaGoTech\Interview\Exception\AmountOutOfRangeException;
 use PragmaGoTech\Interview\Exception\CannotFindRangeForAmount;
 use PragmaGoTech\Interview\Exception\TermValueException;
 use PragmaGoTech\Interview\FeeCalculator;
-use PragmaGoTech\Interview\FeeRangeCalculator;
+use PragmaGoTech\Interview\FeeCalculatorByRange;
 use PragmaGoTech\Interview\Model\LoanProposal;
 use PragmaGoTech\Interview\Service\FeeRangeRuleset;
 use PragmaGoTech\Interview\ValueObject\FeeRangeCollection;
@@ -87,7 +87,7 @@ class FeeCalculatorTest extends TestCase
 
     private function getCalculatorWithRanges(): FeeCalculator
     {
-        return new FeeRangeCalculator(new FeeRangeRuleset());
+        return new FeeCalculatorByRange(new FeeRangeRuleset());
     }
 
     private function getCalculatorWithoutRanges(): FeeCalculator
@@ -97,6 +97,6 @@ class FeeCalculatorTest extends TestCase
         ]);
         $mock->method('getRanges')->willReturn(new FeeRangeCollection());
 
-        return new FeeRangeCalculator($mock);
+        return new FeeCalculatorByRange($mock);
     }
 }

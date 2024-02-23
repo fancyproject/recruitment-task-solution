@@ -1,0 +1,11 @@
+version: '3.8'
+
+services:
+  php:
+    working_dir: /var/www
+    build:
+      context: .
+      dockerfile: ./stack/php/Dockerfile
+    volumes:
+      - ./:/var/www:delegated
+    command: bash -c "composer install && php-fpm -F -R"

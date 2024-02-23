@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace PragmaGoTech\Interview\Service;
+namespace PragmaGoTech\Interview;
 
 use PragmaGoTech\Interview\ValueObject\FeeRange;
 use PragmaGoTech\Interview\ValueObject\FeeRangeCollection;

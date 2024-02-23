@@ -12,7 +12,7 @@ use PragmaGoTech\Interview\Exception\TermValueException;
 use PragmaGoTech\Interview\FeeCalculator;
 use PragmaGoTech\Interview\FeeCalculatorByRange;
 use PragmaGoTech\Interview\Model\LoanProposal;
-use PragmaGoTech\Interview\Service\FeeRangeRuleset;
+use PragmaGoTech\Interview\FeeRangeRuleset;
 use PragmaGoTech\Interview\ValueObject\FeeRangeCollection;
 
 class FeeCalculatorTest extends TestCase

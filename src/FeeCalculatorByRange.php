@@ -9,7 +9,6 @@ use PragmaGoTech\Interview\Exception\CannotFindRangeForAmount;
 use PragmaGoTech\Interview\Exception\TermValueException;
 use PragmaGoTech\Interview\ValueObject\FeeRange;
 use PragmaGoTech\Interview\Model\LoanProposal;
-use PragmaGoTech\Interview\Service\FeeRangeRuleset;
 
 readonly class FeeCalculatorByRange implements FeeCalculator
 {
